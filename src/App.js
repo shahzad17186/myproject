@@ -1,24 +1,27 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Hello from "./Hello";
 
-function App() {
+function App({ name, age, option }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Updated by Muhammad Asif Shahzad</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      Hello World from App.js with {name} and his age is {age - 5}
+      and he is a {option.no}
+      <br></br>
+      <Hello fname={name}></Hello>
     </div>
   );
 }
+/*function App(props) {
+  return (
+    <div>
+      Hello World from App.js with {props.name} and his age is {props.age - 5}
+      and he is a {props.option.yes}
+      <br />
+      <Hello></Hello>
+    </div>
+  );
+}*/
 
 export default App;
